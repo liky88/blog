@@ -73,6 +73,7 @@ social:
   #GitHub:
   #Others:
   weibo: http://weibo.com/likypan
+  douban: http://www.douban.com/people/47149591/
 
 # Social Icons
 social_icons:
@@ -81,6 +82,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  Douban: douban
 
 
 # Sidebar Avatar
@@ -88,6 +90,7 @@ social_icons:
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # default : /images/default_avatar.jpg
 avatar: /images/avatar.jpg
+weibo: /images/weibo.png
 
 
 # TOC in the Sidebar
@@ -169,7 +172,7 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: likypan
 
 # Disqus
 #disqus_shortname:
