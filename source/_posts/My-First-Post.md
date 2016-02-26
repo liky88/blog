@@ -1,5 +1,8 @@
-title: Migrant crisis:Germany sends home rejected Afghans
----------------------------
+title: Migrant crisis:Germany sends home rejected Afghans  
+date: 2016-02-25 07:56:29  
+categories: News  
+tags: [Blog，Content]
+---
 <!-- Wonder the title's format-->
 
 
