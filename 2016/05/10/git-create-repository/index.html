@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://liky88.github.io/blog/tags/index.html">
+<meta name="description" content="Create a new repository on the command lineUse the following steps to init and push a repository in local command line12345678echo &amp;quot;# helloworld&amp;quot; &amp;gt;&amp;gt; README.mdgit initgit add README.mdo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Way to create git repository">
+<meta property="og:url" content="http://liky88.github.io/blog/2016/05/10/git-create-repository/index.html">
 <meta property="og:site_name" content="Liky's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-05-07T04:23:02.000Z">
+<meta property="og:description" content="Create a new repository on the command lineUse the following steps to init and push a repository in local command line12345678echo &amp;quot;# helloworld&amp;quot; &amp;gt;&amp;gt; README.mdgit initgit add README.mdo">
+<meta property="og:updated_time" content="2016-05-10T10:56:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Way to create git repository">
+<meta name="twitter:description" content="Create a new repository on the command lineUse the following steps to init and push a repository in local command line12345678echo &amp;quot;# helloworld&amp;quot; &amp;gt;&amp;gt; README.mdgit initgit add README.mdo">
 
 
 
@@ -111,13 +111,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    标签 | Liky's Blog
-  
-</title>
+  <title> Way to create git repository | Liky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -138,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,16 +232,150 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 5 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Way to create git repository
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T15:58:52+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/10/git-create-repository/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/10/git-create-repository/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Announcement/" style="font-size: 12px; color: #ccc">Announcement</a> <a href="/tags/Git/" style="font-size: 12px; color: #ccc">Git</a> <a href="/tags/Jenkins/" style="font-size: 12px; color: #ccc">Jenkins</a> <a href="/tags/Node/" style="font-size: 12px; color: #ccc">Node</a> <a href="/tags/Notes/" style="font-size: 12px; color: #ccc">Notes</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Create-a-new-repository-on-the-command-line"><a href="#Create-a-new-repository-on-the-command-line" class="headerlink" title="Create a new repository on the command line"></a>Create a new repository on the command line</h1><p>Use the following steps to init and push a repository in local command line<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# helloworld&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">or git add -A</span><br><span class="line">git commit -m &quot;first commit&quot;  </span><br><span class="line">#After the git init, use the add origin to correlate the local repository to desired remote address</span><br><span class="line">git remote add origin git@github.com:githubaccount/project.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="Create-a-new-repository-by-git-clone-the-remote"><a href="#Create-a-new-repository-by-git-clone-the-remote" class="headerlink" title="Create a new repository by git clone the remote"></a>Create a new repository by git clone the remote</h1><p>Firstly, clone the remote repository and paste the codes inside the folder</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag">#Git</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/06/My-First-Post/" rel="next" title="Site Under Construction">
+                <i class="fa fa-chevron-left"></i> Site Under Construction
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/10/jenkins-node-impl/" rel="prev" title="如何使用Jenkins实现多平台并行集成">
+                如何使用Jenkins实现多平台并行集成 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -256,6 +384,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/10/git-create-repository/"
+           data-title="Way to create git repository" data-url="http://liky88.github.io/blog/2016/05/10/git-create-repository/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -275,8 +411,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -346,6 +491,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-new-repository-on-the-command-line"><span class="nav-number">1.</span> <span class="nav-text">Create a new repository on the command line</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-new-repository-by-git-clone-the-remote"><span class="nav-number">2.</span> <span class="nav-text">Create a new repository by git clone the remote</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -442,6 +598,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

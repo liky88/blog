@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Jenkins,Node," />
 
 
 
@@ -84,15 +84,33 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liky's Blog">
-<meta property="og:url" content="http://liky88.github.io/blog/index.html">
+<meta name="description" content="通过对Node的研究，总结如下：方法1：  
+
+添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
+创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用Jenkins实现多平台并行集成">
+<meta property="og:url" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/index.html">
 <meta property="og:site_name" content="Liky's Blog">
-<meta property="og:description">
+<meta property="og:description" content="通过对Node的研究，总结如下：方法1：  
+
+添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
+创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p2.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p3.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p4.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p5.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p6.png">
+<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p7.png">
+<meta property="og:updated_time" content="2016-05-10T10:56:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liky's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="如何使用Jenkins实现多平台并行集成">
+<meta name="twitter:description" content="通过对Node的研究，总结如下：方法1：  
+
+添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
+创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
+<meta name="twitter:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png">
 
 
 
@@ -110,7 +128,7 @@
   };
 </script>
 
-  <title> Liky's Blog </title>
+  <title> 如何使用Jenkins实现多平台并行集成 | Liky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +246,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -252,133 +268,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/31/note-20160531/" itemprop="url">
-                  Notes for 20160531
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T17:18:31+08:00" content="2016-05-31">
-              2016-05-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Notes</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/31/note-20160531/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/note-20160531/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>###Description: Used to configure profile in spring boot<br>ref: <a href="http://blog.csdn.net/lihe2008125/article/details/50443491">http://blog.csdn.net/lihe2008125/article/details/50443491</a></p>
-<p>###Description: application.properties配置<br>ref:<br><a href="http://www.2cto.com/kf/201601/487744.html">http://www.2cto.com/kf/201601/487744.html</a><br><a href="https://hacpai.com/article/1444294462581">https://hacpai.com/article/1444294462581</a><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/31/note-20160531/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/10/jenkins-node-impl/" itemprop="url">
-                  如何使用Jenkins实现多平台并行集成
-                </a>
+                如何使用Jenkins实现多平台并行集成
               
             
           </h1>
@@ -444,291 +334,88 @@
       
 
       
-        
-          <h1 id="通过对Node的研究，总结如下："><a href="#通过对Node的研究，总结如下：" class="headerlink" title="通过对Node的研究，总结如下："></a><strong>通过对Node的研究，总结如下</strong>：</h1><p><strong>方法1</strong>：  </p>
+        <h1 id="通过对Node的研究，总结如下："><a href="#通过对Node的研究，总结如下：" class="headerlink" title="通过对Node的研究，总结如下："></a><strong>通过对Node的研究，总结如下</strong>：</h1><p><strong>方法1</strong>：  </p>
 <ol>
 <li>添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  </li>
 <li>创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style software project)”。  </li>
 <li>为了使得该Job执行并行集成，我选择了”Restrict where this project can be run”，在”Label Expression”中填上了”foo-ci-slaves”，其他配置这里就不赘述了。  </li>
 </ol>
-<p><strong>Result</strong>: 期望两个Slave Node上就会同时进行相关的集成。但Build Log告诉我事实并非我想象的那样：Jenkins只是在一个Slave Node上执行了Job。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/10/jenkins-node-impl/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<p><strong>Result</strong>: 期望两个Slave Node上就会同时进行相关的集成。但Build Log告诉我事实并非我想象的那样：Jenkins只是在一个Slave Node上执行了Job。<br><a id="more"></a><br><strong>方法2</strong>：  </p>
+<ol>
+<li>添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  </li>
+<li>应该选择”构建一个多配置项目(Build multiconfiguration project)”。  </li>
+<li>multiconfiguration project的配置页面中不见了”Restrict where this project can be run”配置选项，但却多出了一个”Configuration Matrix”配置区域。  </li>
+</ol>
+<p>在该区域中，我们可以选择Slaves，在Node/Label中，我们可以看到当前Jenkins中配置的所有Label和Nodes。<br>选择一个Label是无法满足我们的要求的，那样Jenkins只会从Label中的若干个节点中选择一个来执行集成。  </p>
+<p>所以我选择Nodes，将x86-linux-ci-slave和x86-solaris-ci-slave都选上，保存后我们就会在”foo-multiplatform-ci” Job的主页面上看到两个configuration: x86-linux-ci-slave和x86-solaris-ci-slave  </p>
+<p><strong>Result</strong>: 点击”立即构建”，这两个configuration对应的小球标志就会同时闪动，这说明”foo-multiplatform-ci”正在两个Slave  Node上并行运行，bingo！</p>
+<p><strong>Reference</strong>: <a href="http://tonybai.com/2012/02/15/intergating-on-multiple-platforms-simultaneously-using-jenkins/" target="_blank" rel="external">http://tonybai.com/2012/02/15/intergating-on-multiple-platforms-simultaneously-using-jenkins/</a></p>
+<h1 id="Free-style-Software-Project-based-Node-Integration"><a href="#Free-style-Software-Project-based-Node-Integration" class="headerlink" title="Free-style Software Project based Node Integration"></a>Free-style Software Project based Node Integration</h1><img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png" alt="jenkins-node-imp-p1.png" title="">
+<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p2.png" alt="jenkins-node-imp-p2.png" title="">
+<h1 id="Multiconfiguration-Project-based-Node-Integration"><a href="#Multiconfiguration-Project-based-Node-Integration" class="headerlink" title="Multiconfiguration Project based Node Integration"></a>Multiconfiguration Project based Node Integration</h1><img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p3.png" alt="jenkins-node-imp-p3.png" title="">
+<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p4.png" alt="jenkins-node-imp-p4.png" title="">
+<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p5.png" alt="jenkins-node-imp-p5.png" title="">
+<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p6.png" alt="jenkins-node-imp-p6.png" title="">
+<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p7.png" alt="jenkins-node-imp-p7.png" title="">
+
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/10/git-create-repository/" itemprop="url">
-                  Way to create git repository
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-10T15:58:52+08:00" content="2016-05-10">
-              2016-05-10
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/Jenkins/" rel="tag">#Jenkins</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/10/git-create-repository/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/10/git-create-repository/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/Node/" rel="tag">#Node</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="Create-a-new-repository-on-the-command-line"><a href="#Create-a-new-repository-on-the-command-line" class="headerlink" title="Create a new repository on the command line"></a>Create a new repository on the command line</h1><p>Use the following steps to init and push a repository in local command line<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# helloworld&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">or git add -A</span><br><span class="line">git commit -m &quot;first commit&quot;  </span><br><span class="line">#After the git init, use the add origin to correlate the local repository to desired remote address</span><br><span class="line">git remote add origin git@github.com:githubaccount/project.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/10/git-create-repository/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/10/git-create-repository/" rel="next" title="Way to create git repository">
+                <i class="fa fa-chevron-left"></i> Way to create git repository
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/05/31/note-20160531/" rel="prev" title="Notes for 20160531">
+                Notes for 20160531 <i class="fa fa-chevron-right"></i>
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/05/06/My-First-Post/" itemprop="url">
-                  Site Under Construction
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-06T17:14:29+08:00" content="2016-05-06">
-              2016-05-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/announcement/" itemprop="url" rel="index">
-                    <span itemprop="name">announcement</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/06/My-First-Post/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/My-First-Post/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <!-- Wonder the title's format-->
-<p><strong>The site is under construction! Please keep eye on it. :)</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -736,6 +423,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/10/jenkins-node-impl/"
+           data-title="如何使用Jenkins实现多平台并行集成" data-url="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -755,8 +450,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -826,6 +530,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通过对Node的研究，总结如下："><span class="nav-number">1.</span> <span class="nav-text">通过对Node的研究，总结如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Free-style-Software-Project-based-Node-Integration"><span class="nav-number">2.</span> <span class="nav-text">Free-style Software Project based Node Integration</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Multiconfiguration-Project-based-Node-Integration"><span class="nav-number">3.</span> <span class="nav-text">Multiconfiguration Project based Node Integration</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -922,6 +637,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
