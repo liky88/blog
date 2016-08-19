@@ -253,6 +253,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/20/java-volatile/" itemprop="url">
+                  Java Keyword - volatile/synchronized
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-20T00:06:14+08:00" content="2016-08-20">
+              2016-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java-Core/" itemprop="url" rel="index">
+                    <span itemprop="name">Java Core</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/20/java-volatile/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/20/java-volatile/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Java-Keyword-synchronized"><a href="#Java-Keyword-synchronized" class="headerlink" title="Java Keyword - synchronized"></a>Java Keyword - synchronized</h1><p>使用此关键字，来进行同步和加锁。当多线程访问的时候，同一时刻只能允许一个线程使用。</p>
+<h1 id="Java-Keyword-volatile"><a href="#Java-Keyword-volatile" class="headerlink" title="Java Keyword - volatile"></a>Java Keyword - volatile</h1><p>使用此关键字来修饰的变量，线程在每次使用此变量的时候，都会读取变量修改后的值，从而保证原子性。但是注意，这样并不能保证整体模块的原子性。  </p>
+<p>volatile关键字要求线程在使用变量的时候，必须马上从主内存读取，在修改完成之后，马上将数据写入主内存。<br>这个过程无法对线程进行同步。  </p>
+<p>比如：<br>线程1从主内存读取到count的值为2，还没有操作的时候，线程2从主内存也把count读取到线程内部，这个时候依然是2.<br>然后线程1把count自加1设为3，立即刷新到主内存里面。线程2也把counter自加1设置为3，刷新到主内存里面<br>这样，线程2的操作就丢失了。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/20/java-volatile/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/31/note-20160531/" itemprop="url">
                   Notes for 20160531
                 </a>
@@ -322,8 +447,8 @@
 
       
         
-          <p>###Description: Used to configure profile in spring boot<br>ref: <a href="http://blog.csdn.net/lihe2008125/article/details/50443491">http://blog.csdn.net/lihe2008125/article/details/50443491</a></p>
-<p>###Description: application.properties配置<br>ref:<br><a href="http://www.2cto.com/kf/201601/487744.html">http://www.2cto.com/kf/201601/487744.html</a><br><a href="https://hacpai.com/article/1444294462581">https://hacpai.com/article/1444294462581</a><br>
+          <h3 id="Description-Used-to-configure-profile-in-spring-boot"><a href="#Description-Used-to-configure-profile-in-spring-boot" class="headerlink" title="Description: Used to configure profile in spring boot"></a>Description: Used to configure profile in spring boot</h3><p>ref: <a href="http://blog.csdn.net/lihe2008125/article/details/50443491">http://blog.csdn.net/lihe2008125/article/details/50443491</a></p>
+<h3 id="Description-application-properties配置"><a href="#Description-application-properties配置" class="headerlink" title="Description: application.properties配置"></a>Description: application.properties配置</h3><p>ref:<br><a href="http://www.2cto.com/kf/201601/487744.html">http://www.2cto.com/kf/201601/487744.html</a><br><a href="https://hacpai.com/article/1444294462581">https://hacpai.com/article/1444294462581</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/31/note-20160531/#more" rel="contents">
               阅读全文 &raquo;
@@ -767,7 +892,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -775,7 +900,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -784,7 +909,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

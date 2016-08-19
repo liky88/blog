@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Jenkins,Node," />
+  <meta name="keywords" content="Java,synchronized,volatile," />
 
 
 
@@ -84,33 +84,22 @@
 
 
 
-<meta name="description" content="通过对Node的研究，总结如下：方法1：  
-
-添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
-创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
+<meta name="description" content="Java Keyword - synchronized使用此关键字，来进行同步和加锁。当多线程访问的时候，同一时刻只能允许一个线程使用。
+Java Keyword - volatile使用此关键字来修饰的变量，线程在每次使用此变量的时候，都会读取变量修改后的值，从而保证原子性。但是注意，这样并不能保证整体模块的原子性。  
+volatile关键字要求线程在使用变量的时候，必须马上从主内存读取，在修">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用Jenkins实现多平台并行集成">
-<meta property="og:url" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/index.html">
+<meta property="og:title" content="Java Keyword - volatile/synchronized">
+<meta property="og:url" content="http://liky88.github.io/blog/2016/08/20/java-volatile/index.html">
 <meta property="og:site_name" content="Liky's Blog">
-<meta property="og:description" content="通过对Node的研究，总结如下：方法1：  
-
-添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
-创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p2.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p3.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p4.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p5.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p6.png">
-<meta property="og:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p7.png">
-<meta property="og:updated_time" content="2016-05-10T10:56:23.000Z">
+<meta property="og:description" content="Java Keyword - synchronized使用此关键字，来进行同步和加锁。当多线程访问的时候，同一时刻只能允许一个线程使用。
+Java Keyword - volatile使用此关键字来修饰的变量，线程在每次使用此变量的时候，都会读取变量修改后的值，从而保证原子性。但是注意，这样并不能保证整体模块的原子性。  
+volatile关键字要求线程在使用变量的时候，必须马上从主内存读取，在修">
+<meta property="og:updated_time" content="2016-08-19T16:37:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用Jenkins实现多平台并行集成">
-<meta name="twitter:description" content="通过对Node的研究，总结如下：方法1：  
-
-添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  
-创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style sof">
-<meta name="twitter:image" content="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png">
+<meta name="twitter:title" content="Java Keyword - volatile/synchronized">
+<meta name="twitter:description" content="Java Keyword - synchronized使用此关键字，来进行同步和加锁。当多线程访问的时候，同一时刻只能允许一个线程使用。
+Java Keyword - volatile使用此关键字来修饰的变量，线程在每次使用此变量的时候，都会读取变量修改后的值，从而保证原子性。但是注意，这样并不能保证整体模块的原子性。  
+volatile关键字要求线程在使用变量的时候，必须马上从主内存读取，在修">
 
 
 
@@ -128,7 +117,7 @@
   };
 </script>
 
-  <title> 如何使用Jenkins实现多平台并行集成 | Liky's Blog </title>
+  <title> Java Keyword - volatile/synchronized | Liky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +257,7 @@
             
             
               
-                如何使用Jenkins实现多平台并行集成
+                Java Keyword - volatile/synchronized
               
             
           </h1>
@@ -280,8 +269,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-10T16:21:26+08:00" content="2016-05-10">
-              2016-05-10
+            <time itemprop="dateCreated" datetime="2016-08-20T00:06:14+08:00" content="2016-08-20">
+              2016-08-20
             </time>
           </span>
 
@@ -294,8 +283,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Jenkins/" itemprop="url" rel="index">
-                    <span itemprop="name">Jenkins</span>
+                  <a href="/categories/Java-Core/" itemprop="url" rel="index">
+                    <span itemprop="name">Java Core</span>
                   </a>
                 </span>
 
@@ -310,8 +299,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/10/jenkins-node-impl/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/10/jenkins-node-impl/" itemprop="commentsCount"></span>
+                <a href="/2016/08/20/java-volatile/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/20/java-volatile/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -334,29 +323,100 @@
       
 
       
-        <h1 id="通过对Node的研究，总结如下："><a href="#通过对Node的研究，总结如下：" class="headerlink" title="通过对Node的研究，总结如下："></a><strong>通过对Node的研究，总结如下</strong>：</h1><p><strong>方法1</strong>：  </p>
+        <h1 id="Java-Keyword-synchronized"><a href="#Java-Keyword-synchronized" class="headerlink" title="Java Keyword - synchronized"></a>Java Keyword - synchronized</h1><p>使用此关键字，来进行同步和加锁。当多线程访问的时候，同一时刻只能允许一个线程使用。</p>
+<h1 id="Java-Keyword-volatile"><a href="#Java-Keyword-volatile" class="headerlink" title="Java Keyword - volatile"></a>Java Keyword - volatile</h1><p>使用此关键字来修饰的变量，线程在每次使用此变量的时候，都会读取变量修改后的值，从而保证原子性。但是注意，这样并不能保证整体模块的原子性。  </p>
+<p>volatile关键字要求线程在使用变量的时候，必须马上从主内存读取，在修改完成之后，马上将数据写入主内存。<br>这个过程无法对线程进行同步。  </p>
+<p>比如：<br>线程1从主内存读取到count的值为2，还没有操作的时候，线程2从主内存也把count读取到线程内部，这个时候依然是2.<br>然后线程1把count自加1设为3，立即刷新到主内存里面。线程2也把counter自加1设置为3，刷新到主内存里面<br>这样，线程2的操作就丢失了。<br><a id="more"></a></p>
+<p>因此可以使用加锁或者AtomicInteger关键字来处理  </p>
+<p>代码中的count++，不是原子性操作，这个会编译成count = count +1；（默认会被操作成3个步骤，一个是读取，修改，写入，在任何一步一个线程的介入都会产生脏数据） 所以会出现多线程访问冲突问题。  </p>
+<p><strong>原始代码：</strong>  </p>
+<pre><code>public class Counter {
+
+public static int count = 0;
+
+public static void inc() {
+
+    //这里延迟1毫秒，使得结果明显
+    try {
+        Thread.sleep(1);
+    } catch (InterruptedException e) {
+    }
+
+    count++;
+}
+
+public static void main(String[] args) {
+
+    //同时启动1000个线程，去进行i++计算，看看实际结果
+
+    for (int i = 0; i &lt; 1000; i++) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Counter.inc();
+            }
+        }).start();
+    }
+
+    //这里每次运行的值都有可能不同,可能为1000
+    System.out.println(&quot;运行结果:Counter.count=&quot; + Counter.count);
+}
+}
+
+运行结果:Counter.count=995
+实际运算结果每次可能都不一样，本机的结果为：运行结果:Counter.count=995，可以看出，在多线程的环境下，Counter.count并没有期望结果是1000
+</code></pre><p><strong>更改过的代码示例：</strong>  </p>
+<pre><code>package oom;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class Counter {
+
+//    public volatile static int count = 0;
+public static AtomicInteger count = new AtomicInteger(0); 
+
+
+public static void inc() {
+
+// 这里延迟1毫秒，使得结果明显
+try {
+Thread.sleep(1);
+} catch (InterruptedException e) {
+}
+
+//count++;//如果这里使用count++的话，无法保证原子性
+count.incrementAndGet();
+}
+
+public static void main(String[] args) throws     InterruptedException {
+
+// 同时启动1000个线程，去进行i++计算，看看实际结果
+for (int i = 0; i &lt; 10000; i++) {
+  new Thread(new Runnable() {
+  @Override
+  public void run() {
+  Counter.inc();    
+}
+}).start();
+
+}
+
+while (Thread.activeCount() &gt; 1) 
+Thread.yield(); 
+//如果不完全结束全部线程，统计Counter.count也是没有意义的
+//因为多线程的时候，main方法是一个主线程，有可能其他线程还没有完成的时候，main可能就已经运行了以下的println
+//所以可以加一个大延迟或者thread join或者计算thread count
+System.out.println(&quot;运行结果:Counter.count=&quot; + Counter.count);
+System.out.println(Thread.activeCount());
+
+}
+}
+</code></pre><p>Reference Website:  </p>
 <ol>
-<li>添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  </li>
-<li>创建一个新的Job，命名为foo-multiplatform-ci，选择的是”构建一个自由风格的软件项目(Build a free-style software project)”。  </li>
-<li>为了使得该Job执行并行集成，我选择了”Restrict where this project can be run”，在”Label Expression”中填上了”foo-ci-slaves”，其他配置这里就不赘述了。  </li>
+<li><a href="http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html#!comments" target="_blank" rel="external">http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html#!comments</a></li>
 </ol>
-<p><strong>Result</strong>: 期望两个Slave Node上就会同时进行相关的集成。但Build Log告诉我事实并非我想象的那样：Jenkins只是在一个Slave Node上执行了Job。<br><a id="more"></a><br><strong>方法2</strong>：  </p>
-<ol>
-<li>添加两个节点（Slave node），分别命名为x86-linux-ci-slave和x86-solaris-ci-slave，并且为这两个节点设置了一个相同的标签”foo-ci-slaves”。  </li>
-<li>应该选择”构建一个多配置项目(Build multiconfiguration project)”。  </li>
-<li>multiconfiguration project的配置页面中不见了”Restrict where this project can be run”配置选项，但却多出了一个”Configuration Matrix”配置区域。  </li>
-</ol>
-<p>在该区域中，我们可以选择Slaves，在Node/Label中，我们可以看到当前Jenkins中配置的所有Label和Nodes。<br>选择一个Label是无法满足我们的要求的，那样Jenkins只会从Label中的若干个节点中选择一个来执行集成。  </p>
-<p>所以我选择Nodes，将x86-linux-ci-slave和x86-solaris-ci-slave都选上，保存后我们就会在”foo-multiplatform-ci” Job的主页面上看到两个configuration: x86-linux-ci-slave和x86-solaris-ci-slave  </p>
-<p><strong>Result</strong>: 点击”立即构建”，这两个configuration对应的小球标志就会同时闪动，这说明”foo-multiplatform-ci”正在两个Slave  Node上并行运行，bingo！</p>
-<p><strong>Reference</strong>: <a href="http://tonybai.com/2012/02/15/intergating-on-multiple-platforms-simultaneously-using-jenkins/" target="_blank" rel="external">http://tonybai.com/2012/02/15/intergating-on-multiple-platforms-simultaneously-using-jenkins/</a></p>
-<h1 id="Free-style-Software-Project-based-Node-Integration"><a href="#Free-style-Software-Project-based-Node-Integration" class="headerlink" title="Free-style Software Project based Node Integration"></a>Free-style Software Project based Node Integration</h1><img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p1.png" alt="jenkins-node-imp-p1.png" title="">
-<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p2.png" alt="jenkins-node-imp-p2.png" title="">
-<h1 id="Multiconfiguration-Project-based-Node-Integration"><a href="#Multiconfiguration-Project-based-Node-Integration" class="headerlink" title="Multiconfiguration Project based Node Integration"></a>Multiconfiguration Project based Node Integration</h1><img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p3.png" alt="jenkins-node-imp-p3.png" title="">
-<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p4.png" alt="jenkins-node-imp-p4.png" title="">
-<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p5.png" alt="jenkins-node-imp-p5.png" title="">
-<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p6.png" alt="jenkins-node-imp-p6.png" title="">
-<img src="/2016/05/10/jenkins-node-impl/jenkins-node-imp-p7.png" alt="jenkins-node-imp-p7.png" title="">
 
       
     </div>
@@ -378,9 +438,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Jenkins/" rel="tag">#Jenkins</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
-            <a href="/tags/Node/" rel="tag">#Node</a>
+            <a href="/tags/synchronized/" rel="tag">#synchronized</a>
+          
+            <a href="/tags/volatile/" rel="tag">#volatile</a>
           
         </div>
       
@@ -389,17 +451,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/10/git-create-repository/" rel="next" title="Way to create git repository">
-                <i class="fa fa-chevron-left"></i> Way to create git repository
+              <a href="/2016/05/31/note-20160531/" rel="next" title="Notes for 20160531">
+                <i class="fa fa-chevron-left"></i> Notes for 20160531
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/31/note-20160531/" rel="prev" title="Notes for 20160531">
-                Notes for 20160531 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,8 +483,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/10/jenkins-node-impl/"
-           data-title="如何使用Jenkins实现多平台并行集成" data-url="http://liky88.github.io/blog/2016/05/10/jenkins-node-impl/">
+      <div class="ds-thread" data-thread-key="2016/08/20/java-volatile/"
+           data-title="Java Keyword - volatile/synchronized" data-url="http://liky88.github.io/blog/2016/08/20/java-volatile/">
       </div>
     
   </div>
@@ -537,7 +595,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通过对Node的研究，总结如下："><span class="nav-number">1.</span> <span class="nav-text">通过对Node的研究，总结如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Free-style-Software-Project-based-Node-Integration"><span class="nav-number">2.</span> <span class="nav-text">Free-style Software Project based Node Integration</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Multiconfiguration-Project-based-Node-Integration"><span class="nav-number">3.</span> <span class="nav-text">Multiconfiguration Project based Node Integration</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-Keyword-synchronized"><span class="nav-number">1.</span> <span class="nav-text">Java Keyword - synchronized</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-Keyword-volatile"><span class="nav-number">2.</span> <span class="nav-text">Java Keyword - volatile</span></a></li></ol></div>
             
           </div>
         </section>
